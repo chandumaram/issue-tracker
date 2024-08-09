@@ -16,21 +16,69 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Process followed While Crating this Project
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Reference is [https://github.com/mosh-hamedani/issue-tracker/tree/main](https://github.com/mosh-hamedani/issue-tracker/tree/main) & [https://www.youtube.com/watch?v=J9sfR6HN6BY]
 
-## Learn More
+- Install react-icons using `npm install react-icons --save`
 
-To learn more about Next.js, take a look at the following resources:
+  - [https://react-icons.github.io/react-icons/]
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Install classnames using `npm i classnames`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Install and setup MySql database
 
-## Deploy on Vercel
+  1. Install MySql from `https://www.mysql.com/downloads/`
+  2. Install DataGrip from `https://www.jetbrains.com/datagrip/`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Using Prisma
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  1. Install with `npm install prisma`
+  2. Initializing with `npx prisma init`
+  3. write Schema in `prisma/schema.prisma`
+  4. Update DatabaseURL in `.evn`
+  5. Migrate Schema using `npx prisma migrate dev`
+
+- Setup database table in Mysql using DataGrip
+
+- Install Zod using `npm i zod`
+
+  - Zod is a TypeScript-first schema declaration and validation library
+
+- [Radix UI](https://www.radix-ui.com/) - An open source component library
+
+  - Install using `npm install @radix-ui/themes`
+  - Import the CSS file in app/layout.tsx `import '@radix-ui/themes/styles.css';`
+  - Add the **Theme** component in app/layout.tsx
+    ```
+    export default function () {
+      return (
+        <html>
+          <body>
+            <Theme>
+              <MyApp />
+            </Theme>
+          </body>
+        </html>
+      );
+    }
+    ```
+
+- Install react-simplemde-editor using `npm install --save react-simplemde-editor easymde`
+
+  - [https://www.npmjs.com/package/react-simplemde-editor]
+
+- Install react-hook-form using `npm install react-hook-form`
+
+  - [https://react-hook-form.com/get-started]
+
+- Install axios using `npm i axios`
+
+  - Promise based HTTP client for the browser and node.js
+  - [https://www.npmjs.com/package/axios]
+
+- Install React Hook Form using `npm i @hookform/resolvers`
+
+  - Performant, flexible and extensible forms with easy to use validation
+  - [https://www.npmjs.com/package/@hookform/resolvers]
+
